@@ -981,3 +981,10 @@ tr:nth-child(even) {
         flex: 1;
     }
 }
+
+.weather-last-updated {
+    text-align: right;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
