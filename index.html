@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <title>DHM - Department of Hydrology and Meteorology</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <div class="hero-banner">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Department of Hydrology and Meteorology</h1>
+          <p>Providing accurate and timely meteorological and hydrological forecasts for Nepal</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content container">
+      <div class="content-grid">
+        <div class="left-column">
+          <div class="section-box alert-box">
+            <h3 class="section-title"><i class="fas fa-exclamation-triangle"></i> Weather Alerts</h3>
+            <div class="alert-content">
+              <div class="alert-item">
+                <span class="alert-date">June 15, 2023</span>
+                <h4>Heavy Rainfall Warning</h4>
+                <p>Heavy rainfall expected in eastern and central regions over the next 48 hours. Possible flash floods in low-lying areas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-newspaper"></i> Latest News & Announcements</h3>
+            <div class="news-list">
+              <div class="news-item">
+                <span class="news-date">June 12, 2023</span>
+                <h4>Monsoon Arrival Forecast 2023</h4>
+                <p>The Department has released the official monsoon arrival forecast for 2023...</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+              <div class="news-item">
+                <span class="news-date">June 8, 2023</span>
+                <h4>New Weather Station Inaugurated in Pokhara</h4>
+                <p>A new automated weather station has been inaugurated in Pokhara...</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+              <div class="news-item">
+                <span class="news-date">June 1, 2023</span>
+                <h4>Climate Change Report Released</h4>
+                <p>DHM has released its annual climate change report for Nepal...</p>
+                <a href="#" class="read-more">Read More</a>
+              </div>
+            </div>
+            <div class="view-all">
+              <a href="#">View All News</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-water"></i> Real-time Hydrological Data</h3>
+            <table>
+              <thead class="table-header">
+                <tr>
+                  <th>Station Name</th>
+                  <th>Water level (m)</th>
+                  <th>Discharge (m³/s)</th>
+                </tr>
+              </thead>
+              <tbody class="contents">
+                <tr>
+                  <td>Sapta Koshi at Chatara</td>
+                  <td>0</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Narayani at Devghat</td>
+                  <td>0</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Karnali at Chisapani</td>
+                  <td>2.84</td>
+                  <td>1245</td>
+                </tr>
+                <tr>
+                  <td>Bagmati at Gaurighat</td>
+                  <td>0.4</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>Rapti River at Kusum</td>
+                  <td>0</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Babai at Chepang</td>
+                  <td>1.2</td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td>Mahakali at Parigaon</td>
+                  <td>2.88</td>
+                  <td>895</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="more-button">
+              <a
+                href="https://www.dhm.gov.np/hydrology/realtime-stream"
+                class="link"
+                target="_blank"
+              >
+                More>>></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box map-container">
+        <h3 class="section-title"><i class="fas fa-map-marked-alt"></i> Weather Map</h3>
+        <div id="map"></div>
+        <div class="map-legend">
+          <div class="legend-item">
+            <span class="color-box temp-high"></span>
+            <span class="legend-text">Higher Temperature</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-box temp-med"></span>
+            <span class="legend-text">Moderate Temperature</span>
+          </div>
+          <div class="legend-item">
+            <span class="color-box temp-low"></span>
+            <span class="legend-text">Lower Temperature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-access">
+        <div class="quick-access-item">
+          <i class="fas fa-cloud-sun-rain"></i>
+          <h4>Weather Forecasts</h4>
+          <a href="/metfore.html">View Now</a>
+        </div>
+        <div class="quick-access-item">
+          <i class="fas fa-water"></i>
+          <h4>Flood Forecasts</h4>
+          <a href="/hydfore.html">View Now</a>
+        </div>
+        <div class="quick-access-item">
+          <i class="fas fa-file-alt"></i>
+          <h4>Publications</h4>
+          <a href="#">Access</a>
+        </div>
+        <div class="quick-access-item">
+          <i class="fas fa-chart-line"></i>
+          <h4>Climate Data</h4>
+          <a href="#">View Reports</a>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script src="./assets/js/components.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./assets/js/weather.js"></script>
+  </body>
+</html>
